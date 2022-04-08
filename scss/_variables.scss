@@ -1,0 +1,21 @@
+// Colors
+$dark-blue: hsl(209, 23%, 22%); // (Dark Mode Elements)
+$white: hsl(0, 0%, 100%); // (Dark Mode Text & Light Mode Elements)
+$tx-very-dark-blue: hsl(200, 15%, 8%); // (Light Mode Text)
+$dark-gray: hsl(0, 0%, 52%); // (Light Mode Input)
+$bg-very-dark-blue: hsl(207, 26%, 17%); // (Dark Mode Background)
+$very-light-gray: hsl(0, 0%, 98%); // (Light Mode Background)
+
+// Tranisition
+$fast-transition: 0.2s linear;
+$main-transition: 0.3s linear;
+$medium-transition: 0.4s linear;
+$slow-transition: 0.5s linear;
+
+// Borders
+$border-radius: 6px;
+
+// Shadows
+// $box-shadow: 0 2px 15px rgba(0, 0, 0, 0.050);
+$box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+$box-shadow-alt: 0 4px 20px rgba(0, 0, 0, 0.11);
