@@ -11,7 +11,7 @@ let searchInput = document.querySelector(".search-input");
 // Country Card HTML Structure
 function countryStructure(data) {
   return `
-      <a href="#" class="country scale-effect" data-country-name='${data.name}'>
+      <a href="#" class="country scale-effect" data-country-name="${data.name}">
           <div class="country-flag">
               <img src=${data.flag} alt="${data.name} Flag">
           </div>
