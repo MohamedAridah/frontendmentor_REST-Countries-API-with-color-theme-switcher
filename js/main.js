@@ -18,9 +18,9 @@ function countryStructure(data) {
           <div class="country-info">
               <h2 class="country-title">${data.name}</h2>
               <ul class="country-brief">
-                  <li><span>population: </span>${data.population}</li>
-                  <li><span>Region: </span>${data.region}</li>
-                  <li><span>capital: </span>${data.capital}</li>
+                  <li><strong>population: </strong>${data.population}</li>
+                  <li><strong>Region: </strong>${data.region}</li>
+                  <li><strong>capital: </strong>${data.capital}</li>
               </ul>
           </div>
       </a>
@@ -30,7 +30,7 @@ function countryStructure(data) {
 // Get All Countries
 async function getCountries(apiLink) {
   try {
-    let response = await fetch(apiLink);
+    let response = await fetch(apiLink,{cache:'force-cache'});
     // console.log(response);
     let data = await response.json();
     // console.log(data);
