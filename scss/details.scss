@@ -1,0 +1,133 @@
+@import "./variables";
+@import "./mixins";
+
+body {
+  font-size: 16px;
+}
+
+.btn {
+  &:hover {
+    box-shadow: $box-shadow-alt;
+  }
+
+  &.btn-back {
+    margin: 60px 0;
+  }
+
+  &.btn-with-icon {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+}
+
+.country-details {
+  width: 100%;
+
+  @include breakpoint-up(large) {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &.no-flex {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.country-flag,
+.country-info {
+  @include breakpoint-up(large) {
+    flex: 1 0 calc(50% - 30px);
+  }
+}
+.country-flag {
+  flex-shrink: 0;
+  width: 450px;
+  max-width: 450px;
+  max-height: 350px;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  margin-right: 70px;
+  border-radius: $border-radius;
+
+  @include breakpoint-down(small) {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.country-info {
+  padding: 40px 0;
+
+  h1 {
+    color: $tx-very-dark-blue;
+    margin-bottom: 30px;
+  }
+
+  strong {
+    text-transform: capitalize;
+    color: $tx-very-dark-blue;
+
+    &.warning {
+      color: #d21034 !important;
+    }
+  }
+
+  li {
+    text-transform: capitalize;
+    color: $dark-blue;
+
+    button {
+      font-size: inherit;
+    }
+  }
+
+  > .col-2 {
+    @include breakpoint-up(medium) {
+      display: flex;
+      align-items: flex-start;
+      gap: 140px;
+    }
+  }
+
+  > .col-2 {
+    .col-2 {
+      margin: 40px 0;
+
+      @include breakpoint-up(medium) {
+        margin: 0;
+      }
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  > .col-3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    @include breakpoint-up(medium) {
+      margin-top: 35px;
+    }
+
+    ul {
+      display: inherit;
+      align-items: inherit;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+  }
+}

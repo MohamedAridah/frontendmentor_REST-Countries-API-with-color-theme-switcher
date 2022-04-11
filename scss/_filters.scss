@@ -1,0 +1,134 @@
+.filters {
+  margin: 40px 0 50px 0;
+
+  @include breakpoint-up(medium) {
+    margin: 50px 0 60px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+
+    @include breakpoint-up(large) {
+      width: 480px;
+      max-width: 480px;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 18px;
+    color: $dark-gray;
+    z-index: 2;
+  }
+
+  .search-input {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    padding-left: 60px;
+    font-size: 18px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: inherit;
+    outline: none;
+    border: none;
+    border-radius: $border-radius;
+    overflow: hidden;
+    color: $tx-very-dark-blue;
+    background-color: $white;
+
+    box-shadow: $box-shadow;
+    transition: $fast-transition;
+
+    &::placeholder {
+      font-family: inherit;
+      color: $dark-gray;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      font-weight: inherit;
+    }
+  }
+
+  .dropdown-wrapper {
+    position: relative;
+    width: 230px;
+
+    @include breakpoint-up(large) {
+      width: 200px;
+    }
+
+    &.open {
+      .dropdown-header .icon {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-body {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        z-index: 9;
+      }
+    }
+  }
+
+  .dropdown-header,
+  .dropdown-body {
+    position: relative;
+    width: 100%;
+    border-radius: $border-radius;
+    background: $white;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: $box-shadow;
+    transition: $fast-transition;
+  }
+
+  .dropdown-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 2;
+
+    .icon {
+      font-size: 13px;
+      transition: transform $fast-transition;
+    }
+  }
+
+  .dropdown-body {
+    position: absolute;
+    margin-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    padding: 15px 0;
+    transform: translateY(-20px);
+
+    li {
+      padding: 8px 25px;
+      text-transform: capitalize;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($color: $very-light-gray, $amount: 3%);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

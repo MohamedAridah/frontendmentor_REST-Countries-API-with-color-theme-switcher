@@ -1,0 +1,309 @@
+*,
+*:after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #fafafa;
+  color: #111517;
+  transition: 0.2s linear;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #111517;
+}
+
+.container {
+  width: 100%;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+}
+
+@media (min-width: 64em) {
+  .container {
+    width: 94%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex.flex-jc-c {
+  justify-content: center;
+}
+
+.flex.flex-ai-c {
+  align-items: center;
+}
+
+.flex.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.button,
+button {
+  font-family: "Nunito Sans", sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  background-color: white;
+  color: #111517;
+  text-transform: capitalize;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 7px 21px;
+  border-radius: 4px;
+  transition: 0.2s linear;
+}
+
+.scale-effect:active {
+  transform: scale(0.88);
+  transition: transform 0.2s linear;
+}
+
+.show-more {
+  margin: 60px 0;
+}
+
+.show-more .btn {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  transition: 0.2s linear, opacity 0.2s linear, visibility 0.3s linear;
+}
+
+.loader.close {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader .spinner .icon {
+  font-size: 80px;
+  color: #111517;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #202c37;
+  border-radius: 50%;
+  z-index: 8;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s linear;
+}
+
+.scroll-top:hover {
+  background-color: #283743;
+}
+
+.scroll-top.show {
+  right: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top .icon {
+  color: white;
+  font-size: 17px;
+}
+
+.notifi-wrapper {
+  padding: 25px;
+  color: #111517;
+  text-align: center;
+}
+
+.notifi-wrapper h2 {
+  margin-bottom: 15px;
+}
+
+.header {
+  position: relative;
+  background: white;
+  padding: 1.25rem 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.2s linear;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo h1 {
+  font-size: 20px;
+}
+
+@media (max-width: 400px) {
+  .header .logo h1 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 64em) {
+  .header .logo h1 {
+    font-size: 22px;
+  }
+}
+
+.header .theme-toggle {
+  gap: 0.625rem;
+  font-size: 14px;
+  color: #111517;
+  transition: 0.2s linear;
+}
+
+.header .theme-toggle .theme-icon {
+  font-size: 20px;
+}
+
+.header .theme-toggle .theme-text {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@media (max-width: 400px) {
+  .header .theme-toggle .theme-text {
+    display: none;
+  }
+}
+
+body.dark-theme {
+  background-color: #202c37;
+  color: white;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4 {
+  color: white;
+}
+
+body.dark-theme .header {
+  background: #2b3945;
+}
+
+body.dark-theme .header .theme-toggle {
+  color: white;
+}
+
+body.dark-theme .filters .search-icon {
+  color: white;
+}
+
+body.dark-theme .filters .search-input {
+  color: white;
+  background-color: #2b3945;
+}
+
+body.dark-theme .filters .search-input::placeholder {
+  color: white;
+}
+
+body.dark-theme .filters .dropdown-header,
+body.dark-theme .filters .dropdown-body {
+  background: #2b3945;
+}
+
+body.dark-theme .filters .dropdown-body li:hover {
+  background-color: #354555;
+}
+
+body.dark-theme .countries-grid .country {
+  color: white;
+  background: #2b3945;
+}
+
+body.dark-theme .countries-grid .country span {
+  color: white;
+}
+
+body.dark-theme .loader {
+  background-color: #202c37;
+}
+
+body.dark-theme .loader .spinner .icon {
+  color: white;
+}
+
+body.dark-theme .scroll-top {
+  background-color: #2b3945;
+}
+
+body.dark-theme .notifi-wrapper {
+  color: white;
+}
+
+body.dark-theme .btn {
+  background-color: #2b3945;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .country-info li {
+  color: #858585;
+}
+
+body.dark-theme .country-info strong {
+  color: white;
+}

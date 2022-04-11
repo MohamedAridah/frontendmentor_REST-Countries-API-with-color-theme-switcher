@@ -1,0 +1,225 @@
+.filters {
+  margin: 40px 0 50px 0;
+}
+
+@media (min-width: 40em) {
+  .filters {
+    margin: 50px 0 60px 0;
+  }
+}
+
+.filters .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 64em) {
+  .filters .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.filters .search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .filters .search-wrapper {
+    width: 480px;
+    max-width: 480px;
+  }
+}
+
+.filters .search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 18px;
+  color: #858585;
+  z-index: 2;
+}
+
+.filters .search-input {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  padding-left: 60px;
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: inherit;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+  color: #111517;
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.2s linear;
+}
+
+.filters .search-input::placeholder {
+  font-family: inherit;
+  color: #858585;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: inherit;
+}
+
+.filters .dropdown-wrapper {
+  position: relative;
+  width: 230px;
+}
+
+@media (min-width: 64em) {
+  .filters .dropdown-wrapper {
+    width: 200px;
+  }
+}
+
+.filters .dropdown-wrapper.open .dropdown-header .icon {
+  transform: rotate(180deg);
+}
+
+.filters .dropdown-wrapper.open .dropdown-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 9;
+}
+
+.filters .dropdown-header,
+.filters .dropdown-body {
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  background: white;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.2s linear;
+}
+
+.filters .dropdown-header {
+  padding: 15px 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.filters .dropdown-header .icon {
+  font-size: 13px;
+  transition: transform 0.2s linear;
+}
+
+.filters .dropdown-body {
+  position: absolute;
+  margin-top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  padding: 15px 0;
+  transform: translateY(-20px);
+}
+
+.filters .dropdown-body li {
+  padding: 8px 25px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.filters .dropdown-body li:hover {
+  background-color: #f2f2f2;
+}
+
+.filters .dropdown-body li:last-child {
+  margin-bottom: 0;
+}
+
+.main .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.countries-grid {
+  display: grid;
+  gap: 50px;
+}
+
+.countries-grid.no-grid {
+  grid-template-columns: auto;
+  height: 100vh;
+  place-items: center;
+}
+
+@media (min-width: 40em) {
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .countries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 87.5em) {
+  .countries-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.countries-grid .country {
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  color: #111517;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background: white;
+  overflow: hidden;
+  transition: transform 0.3s linear, box-shadow 0.2s linear, background-color 0.2s linear;
+}
+
+.countries-grid .country:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.11);
+}
+
+.countries-grid .country-flag {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .countries-grid .country-flag {
+    height: auto;
+  }
+}
+
+.countries-grid .country-flag img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.countries-grid .country-info {
+  position: relative;
+  padding: 30px 25px;
+}
+
+.countries-grid .country-title {
+  margin-bottom: 20px;
+}
+
+.countries-grid .country-brief li {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}

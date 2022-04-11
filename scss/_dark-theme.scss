@@ -1,0 +1,93 @@
+body {
+  &.dark-theme {
+    $box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    background-color: $bg-very-dark-blue;
+    color: $white;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: $white;
+    }
+
+    .header {
+      background: $dark-blue;
+
+      .theme-toggle {
+        color: $white;
+      }
+    }
+
+    .filters {
+      .search-icon {
+        color: $white;
+      }
+
+      .search-input {
+        color: $white;
+        background-color: $dark-blue;
+
+        &::placeholder {
+          color: $white;
+        }
+      }
+
+      .dropdown-header,
+      .dropdown-body {
+        background: $dark-blue;
+      }
+
+      .dropdown-body {
+        li {
+          &:hover {
+            background-color: lighten($color: $dark-blue, $amount: 5%);
+          }
+        }
+      }
+    }
+
+    .countries-grid {
+      .country {
+        color: $white;
+        background: $dark-blue;
+
+        span {
+          color: $white;
+        }
+      }
+    }
+
+    .loader {
+      background-color: $bg-very-dark-blue;
+
+      .spinner .icon {
+        color: $white;
+      }
+    }
+
+    .scroll-top {
+      background-color: $dark-blue;
+    }
+
+    .notifi-wrapper {
+      color: $white;
+    }
+
+    .btn {
+      background-color: $dark-blue;
+      color: $white;
+      box-shadow: $box-shadow;
+    }
+
+    .country-info {
+      li {
+        color: $dark-gray;
+      }
+      strong {
+        color: $white;
+      }
+    }
+  }
+}

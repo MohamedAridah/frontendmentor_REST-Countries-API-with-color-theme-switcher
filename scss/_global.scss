@@ -1,0 +1,109 @@
+*,
+*:after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: $very-light-gray;
+  color: $tx-very-dark-blue;
+  transition: $fast-transition;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $tx-very-dark-blue;
+}
+
+.container {
+  width: 100%;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+
+  @include breakpoint-up(large) {
+    width: 94%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include max-400 {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &.flex-jc-sb {
+    justify-content: space-between;
+  }
+
+  &.flex-jc-c {
+    justify-content: center;
+  }
+
+  &.flex-ai-c {
+    align-items: center;
+  }
+
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.button,
+button {
+  font-family: "Nunito Sans", sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  background-color: $white;
+  color: $tx-very-dark-blue;
+  text-transform: capitalize;
+  box-shadow: $box-shadow;
+  padding: 7px 21px;
+  border-radius: $border-radius - 2;
+  transition: $fast-transition;
+}
+
+.scale-effect:active {
+  transform: scale(0.88);
+  transition: transform $fast-transition;
+}
+
+.show-more {
+  margin: 60px 0;
+
+  .btn {
+    font-weight: bold;
+    font-size: 16px;
+  }
+}

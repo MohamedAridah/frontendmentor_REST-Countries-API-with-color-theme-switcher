@@ -1,0 +1,47 @@
+.header {
+  position: relative;
+  background: $white;
+  padding: 1.25rem 0; // 20px
+  box-shadow: $box-shadow;
+  transition: $fast-transition;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    h1 {
+      font-size: 20px;
+
+      @include max-400 {
+        font-size: 16px;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .theme-toggle {
+    gap: 0.625rem;
+    font-size: 14px;
+    color: $tx-very-dark-blue;
+    transition: $fast-transition;
+
+    .theme-icon {
+      font-size: 20px;
+    }
+
+    .theme-text {
+      font-weight: 600;
+      text-transform: capitalize;
+
+      @include max-400 {
+        display: none;
+      }
+    }
+  }
+}

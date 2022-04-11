@@ -1,0 +1,81 @@
+.main {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.countries-grid {
+  display: grid;
+  gap: 50px;
+
+  &.no-grid {
+    grid-template-columns: auto;
+    height: 100vh;
+    place-items: center;
+  }
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint-up(xlarge) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .country {
+    position: relative;
+    width: 100%;
+    border-radius: $border-radius;
+    color: $tx-very-dark-blue;
+    box-shadow: $box-shadow;
+    background: $white;
+    overflow: hidden;
+    transition: transform $main-transition, box-shadow $fast-transition,
+      background-color $fast-transition;
+
+    &:hover {
+      transform: scale(1.04);
+      box-shadow: $box-shadow-alt;
+    }
+  }
+
+  .country-flag {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+
+    @include max-400 {
+      height: auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .country-info {
+    position: relative;
+    padding: 30px 25px;
+  }
+
+  .country-title {
+    margin-bottom: 20px;
+  }
+
+  .country-brief {
+    li {
+      font-size: 16px;
+      text-transform: capitalize;
+      margin-bottom: 15px;
+    }
+  }
+}

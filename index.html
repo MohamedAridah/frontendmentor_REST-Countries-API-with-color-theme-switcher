@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="This is a simple project to display countries of the world with the ability to search for the country you want, be side the ability to show countries by continent."
+    />
+    <meta name="author" content="Mohamed Aridah" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome Library -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <!-- Shared CSS Styles File -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- Page Custom CSS File -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>REST Countries API with color theme switcher</title>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader">
+      <div class="spinner">
+        <i class="fa-regular fa-circle-notch fa-spin icon"></i>
+      </div>
+    </div>
+    <!-- Scroll Top -->
+    <button
+      type="button"
+      aria-label="Scroll Top Button"
+      class="button scroll-top flex flex-ai-c flex-jc-c scale-effect"
+    >
+      <i class="fa-regular fa-chevron-up icon"></i>
+    </button>
+    <!-- Header -->
+    <header class="header">
+      <div class="container flex flex-jc-sb flex-ai-c">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Where in the world?</h1>
+          </a>
+        </div>
+        <button
+          type="button"
+          aria-label="Theme Switcher Button"
+          class="theme-toggle flex flex-jc-sb flex-ai-c"
+        >
+          <i class="fa-regular fa-moon theme-icon"></i>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+      </div>
+    </header>
+    <!-- Filters -->
+    <section class="filters">
+      <div class="container">
+        <div class="search-wrapper">
+          <i class="fa-regular fa-magnifying-glass search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for a country..."
+          />
+        </div>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-header flex flex-jc-sb flex-ai-c">
+            <span>Filter by Region</span>
+            <i class="fa-regular fa-chevron-down icon"></i>
+          </div>
+          <div class="dropdown-body">
+            <ul>
+              <li data-region="all">all</li>
+              <li data-region="africa">africa</li>
+              <li data-region="americas">america</li>
+              <li data-region="asia">asia</li>
+              <li data-region="europe">europe</li>
+              <li data-region="oceania">oceania</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Countries -->
+    <main class="main">
+      <div class="container">
+        <section class="countries-grid"></section>
+        <div class="show-more flex flex-jc-c">
+          <button type="button" class="btn show-more-btn scale-effect">
+            show more
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./js/common.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
