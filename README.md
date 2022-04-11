@@ -4,7 +4,7 @@
  <h1>REST Countries API with color theme switcher</h1>
  <h3>
     <!-- Github Pages Live -->
-    <a href=" https://mohamedaridah.github.io/frontendmentor_REST-Countries-API-with-color-theme-switcher/">Live</a>
+    <a href="https://mohamedaridah.github.io/frontendmentor_REST-Countries-API-with-color-theme-switcher/">Live</a>
     <span>&nbsp;|&nbsp;</span>
     <!-- Frontend Mentor Live solution -->
     <a href="https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-using-vanilla-javascript-ByX3ZG1Vc" title="Check My Solution on Frontend Mentor">
