@@ -28,15 +28,14 @@ let switchBtnIcon = switchBtn.querySelector(".theme-icon");
 let theme = "light";
 
 function chanegMode(mode, text, icon) {
-  console.log(mode);
   let iconClasses = `fa-regular theme-icon ${
     mode == "dark" ? "fa-sun-bright" : "fa-moon"
   }`;
   text.textContent = mode == "dark" ? "light mode" : "dark mode";
   icon.className = iconClasses;
   mode == "dark"
-    ? document.body.classList.remove("dark-theme")
-    : document.body.classList.add("dark-theme");
+    ? document.body.classList.add("dark-theme")
+    : document.body.classList.remove("dark-theme");
 }
 
 // Error Messgaes
@@ -82,9 +81,9 @@ function controlScrollButton() {
 
 scrollBtn.addEventListener("click", scrollTop);
 switchBtn.addEventListener("click", () => {
+   theme = theme == "light" ? "dark" : "light";
   chanegMode(theme, switchBtnText, switchBtnIcon);
   localStorage.setItem("theme", theme);
-  theme = theme == "light" ? "dark" : "light";
 });
 window.addEventListener("load", () => {
   let userTheme = localStorage.getItem("theme");
